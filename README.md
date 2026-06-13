@@ -52,7 +52,7 @@ You need:
 
 The AI model is about 17 GB. The installer downloads it for you, so it may take a while depending on your internet speed.
 
-## Tested Hardware
+## Tested Hardware And Speed
 
 This setup was tested on a normal desktop gaming/workstation build:
 
@@ -62,8 +62,17 @@ This setup was tested on a normal desktop gaming/workstation build:
 | GPU | NVIDIA GeForce RTX 3070 |
 | VRAM | 8 GB |
 | RAM | 32 GB |
+| Prompt processing speed | About 245-254 tokens per second |
+| Text generation speed | About 24-28 tokens per second |
 
 That means this is not meant only for giant workstation machines. Performance will vary, but the tested build is a realistic consumer PC.
+
+Example from a real run on that build:
+
+```text
+prompt eval time = 178961.04 ms / 43960 tokens = 245.64 tokens per second
+eval time        =  17106.74 ms /   417 tokens =  24.38 tokens per second
+```
 
 ## What Model It Uses
 
@@ -204,22 +213,6 @@ After install, go to your Desktop.
 4. Double-click `OpenCode Desktop`.
 
 Keep the `Start llama.cpp Server` window open while using OpenCode Desktop.
-
-## Example Speed
-
-On the tested RTX 3070 build above, this setup reached roughly:
-
-- Prompt processing: about `245-254 tokens per second`
-- Text generation: about `24-28 tokens per second`
-
-Example from a real run:
-
-```text
-prompt eval time = 178961.04 ms / 43960 tokens = 245.64 tokens per second
-eval time        =  17106.74 ms /   417 tokens =  24.38 tokens per second
-```
-
-Your speed may be higher or lower depending on your GPU, CPU, RAM, and prompt size.
 
 ## What The Installer Does
 
