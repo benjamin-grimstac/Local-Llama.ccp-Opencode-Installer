@@ -24,6 +24,49 @@ No cloud API key is required. The model runs on your own computer.
 
 This is meant for people who want a working local AI coding setup without spending a weekend learning the tooling first.
 
+## What You Can Do With It
+
+This gives you a local AI helper you can use for more than just writing code.
+
+Good uses include:
+
+- Debugging Windows problems
+- Understanding error messages
+- Reading and explaining log files
+- Troubleshooting home network issues
+- Helping with router, DNS, Wi-Fi, or firewall questions
+- Explaining what a script or command does before you run it
+- Writing simple PowerShell or batch scripts
+- Fixing broken config files
+- Reviewing code before you run it
+- Explaining GitHub projects in plain English
+- Helping set up local tools without sending your work to a cloud model
+- Working through PC build, driver, CUDA, or GPU setup issues
+
+Example things you can ask OpenCode after this is installed:
+
+```text
+Explain this Windows error in plain English.
+```
+
+```text
+Look at this log and tell me what failed.
+```
+
+```text
+Help me troubleshoot why my PC cannot reach another device on my network.
+```
+
+```text
+Write a safe PowerShell script that lists large files in my Downloads folder.
+```
+
+```text
+Review this config file and tell me what looks wrong.
+```
+
+It is still an AI assistant, not magic. For risky commands, deleting files, registry changes, firewall changes, or anything involving passwords, read what it suggests before running it.
+
 ## What You Get
 
 After installing, you will have two shortcuts on your Desktop:
