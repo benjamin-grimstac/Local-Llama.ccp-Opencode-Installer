@@ -1,0 +1,17 @@
+# Installed output
+/llama.cpp/
+/models/
+/downloads/
+/logs/
+/runtime/
+/config/
+/OpenCode/
+/backups/
+/screenshots/
+
+# Generated launchers
+/Start-LLM-Server.cmd
+/Open-OpenCode.cmd
+
+# Generated shortcuts should not normally be committed
+/*.lnk
