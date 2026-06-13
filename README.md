@@ -164,6 +164,22 @@ After install, go to your Desktop.
 
 Keep the `Start llama.cpp Server` window open while using OpenCode Desktop.
 
+## Example Speed
+
+On the maintainer's test machine, this setup reached roughly:
+
+- Prompt processing: about `245-254 tokens per second`
+- Text generation: about `24-28 tokens per second`
+
+Example from a real run:
+
+```text
+prompt eval time = 178961.04 ms / 43960 tokens = 245.64 tokens per second
+eval time        =  17106.74 ms /   417 tokens =  24.38 tokens per second
+```
+
+Your speed may be higher or lower depending on your GPU, CPU, RAM, and prompt size.
+
 ## What The Installer Does
 
 The installer automatically:
