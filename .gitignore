@@ -1,4 +1,5 @@
 # Installed output
+/.playwright-mcp/
 /llama.cpp/
 /models/
 /downloads/
@@ -7,7 +8,6 @@
 /config/
 /OpenCode/
 /backups/
-/screenshots/
 
 # Generated launchers
 /Start-LLM-Server.cmd

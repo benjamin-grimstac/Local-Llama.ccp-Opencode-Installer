@@ -24,6 +24,36 @@ You need:
 
 The AI model is about 17 GB. The installer downloads it for you, so it may take a while depending on your internet speed.
 
+## What Model It Uses
+
+The installer uses this exact model file:
+
+```text
+Qwen3.6-35B-A3B-Uncensored-Genesis-MTP-APEX-Compact.gguf
+```
+
+Model source page:
+
+```text
+https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF
+```
+
+Direct model download used by the installer:
+
+```text
+https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/resolve/main/Qwen3.6-35B-A3B-Uncensored-Genesis-MTP-APEX-Compact.gguf?download=true
+```
+
+Approximate model size: `17 GB`.
+
+The model runs locally on your computer through `llama.cpp`. OpenCode is configured to talk to the local server at:
+
+```text
+http://127.0.0.1:11434/v1
+```
+
+`127.0.0.1` means your own computer.
+
 ## Download The Installer From GitHub
 
 1. Open this page in your web browser:
@@ -32,11 +62,19 @@ The AI model is about 17 GB. The installer downloads it for you, so it may take 
 https://github.com/benjamin-grimstac/Local-Llama.ccp-Opencode-Installer
 ```
 
+You should see a page like this:
+
+![GitHub repo page](screenshots/01-github-repo-page.png)
+
 2. Look for the green `Code` button near the top of the page.
 
 3. Click the green `Code` button.
 
 4. Click `Download ZIP`.
+
+It looks like this:
+
+![GitHub Download ZIP menu](screenshots/02-download-zip-menu.png)
 
 5. Wait for the ZIP file to download.
 
