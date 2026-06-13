@@ -1,8 +1,28 @@
 # LOCAL-AI One-Click Installer
 
-This installs a local AI server and OpenCode Desktop on Windows.
+This is a simple Windows installer for running a good local AI coding setup without needing to understand terminals, GitHub, model files, or server setup.
 
 You do not need to know GitHub, git, coding, PowerShell, or terminals.
+
+The goal is simple:
+
+1. Download the ZIP.
+2. Double-click the installer.
+3. Start the local server.
+4. Open OpenCode Desktop.
+
+No cloud API key is required. The model runs on your own computer.
+
+## Why Use This
+
+- No command line knowledge required
+- No OpenCode setup required
+- No model hunting required
+- No cloud AI account required
+- Runs locally on consumer hardware
+- Uses a strong local GGUF model that is downloaded and configured for you
+
+This is meant for people who want a working local AI coding setup without spending a weekend learning the tooling first.
 
 ## What You Get
 
@@ -13,6 +33,14 @@ After installing, you will have two shortcuts on your Desktop:
 
 Use them in that order.
 
+This gives you:
+
+- A local llama.cpp AI server
+- OpenCode Desktop GUI
+- A downloaded local GGUF model
+- OpenCode automatically pointed at that local model
+- A setup that has been tested on a normal consumer GPU
+
 ## Before You Start
 
 You need:
@@ -20,9 +48,22 @@ You need:
 - A Windows 10 or Windows 11 computer
 - An internet connection
 - At least 25 GB of free disk space
-- An NVIDIA GPU is recommended
+- An NVIDIA GPU is recommended and was used for testing
 
 The AI model is about 17 GB. The installer downloads it for you, so it may take a while depending on your internet speed.
+
+## Tested Hardware
+
+This setup was tested on a normal desktop gaming/workstation build:
+
+| Part | Tested Build |
+| --- | --- |
+| CPU | AMD Ryzen 7 5700X 8-Core Processor |
+| GPU | NVIDIA GeForce RTX 3070 |
+| VRAM | 8 GB |
+| RAM | 32 GB |
+
+That means this is not meant only for giant workstation machines. Performance will vary, but the tested build is a realistic consumer PC.
 
 ## What Model It Uses
 
@@ -166,7 +207,7 @@ Keep the `Start llama.cpp Server` window open while using OpenCode Desktop.
 
 ## Example Speed
 
-On the maintainer's test machine, this setup reached roughly:
+On the tested RTX 3070 build above, this setup reached roughly:
 
 - Prompt processing: about `245-254 tokens per second`
 - Text generation: about `24-28 tokens per second`
