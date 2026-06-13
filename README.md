@@ -54,6 +54,24 @@ http://127.0.0.1:11434/v1
 
 `127.0.0.1` means your own computer.
 
+## OpenCode Is Configured Automatically
+
+You do not need to set up OpenCode yourself.
+
+The installer automatically writes the OpenCode settings file here:
+
+```text
+%USERPROFILE%\.config\opencode\opencode.json
+```
+
+If an OpenCode settings file already exists, the installer backs it up first inside:
+
+```text
+Desktop\LOCAL-AI\backups
+```
+
+The automatic config tells OpenCode Desktop to use the local llama.cpp server on your own computer.
+
 ## Download The Installer From GitHub
 
 1. Open this page in your web browser:
