@@ -72,6 +72,14 @@ Desktop\LOCAL-AI\backups
 
 The automatic config tells OpenCode Desktop to use the local llama.cpp server on your own computer.
 
+It also sets the default OpenCode model to the local model:
+
+```text
+llamacpp/qwen-local
+```
+
+That means OpenCode should use the downloaded local GGUF model by default, not an online model provider.
+
 ## Download The Installer From GitHub
 
 1. Open this page in your web browser:
