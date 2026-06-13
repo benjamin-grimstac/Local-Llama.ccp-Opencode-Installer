@@ -28,44 +28,53 @@ This is meant for people who want a working local AI coding setup without spendi
 
 This gives you a local AI helper you can use for more than just writing code.
 
-Good uses include:
+Good uses include debugging your PC, understanding scary error messages, reading logs, troubleshooting your network, pulling GitHub projects, installing local tools, writing simple scripts, reviewing configs, and getting plain-English explanations before you change anything.
 
-- Debugging Windows problems
-- Understanding error messages
-- Reading and explaining log files
-- Troubleshooting home network issues
-- Helping with router, DNS, Wi-Fi, or firewall questions
-- Explaining what a script or command does before you run it
-- Writing simple PowerShell or batch scripts
-- Fixing broken config files
-- Reviewing code before you run it
-- Explaining GitHub projects in plain English
-- Helping set up local tools without sending your work to a cloud model
-- Working through PC build, driver, CUDA, or GPU setup issues
-
-Example things you can ask OpenCode after this is installed:
+Thoughtful examples you can ask OpenCode after this is installed:
 
 ```text
-Explain this Windows error in plain English.
+I found this GitHub project. Read the README and tell me exactly what it does, whether it looks safe, what it installs, and the simplest Windows install steps.
 ```
 
 ```text
-Look at this log and tell me what failed.
+Clone this GitHub repo into my Downloads folder, inspect it first, then walk me through the install one step at a time: https://github.com/example/project
 ```
 
 ```text
-Help me troubleshoot why my PC cannot reach another device on my network.
+I want to install this tool from GitHub, but I do not know git. Give me the easiest Windows path, including whether I should use Download ZIP, git clone, pip, npm, or an installer.
 ```
 
 ```text
-Write a safe PowerShell script that lists large files in my Downloads folder.
+Look at this PowerShell script before I run it. Tell me what it changes, what could go wrong, and whether it touches files, the registry, firewall, services, or passwords.
 ```
 
 ```text
-Review this config file and tell me what looks wrong.
+My PC cannot reach my server at 192.168.0.115. Give me a simple checklist for Windows: ping, ipconfig, firewall, router, DNS, and port checks.
 ```
 
-It is still an AI assistant, not magic. For risky commands, deleting files, registry changes, firewall changes, or anything involving passwords, read what it suggests before running it.
+```text
+Here is an error from an app install. Translate it into normal English, tell me the most likely cause, and give me the next three things to try.
+```
+
+```text
+Read this log file and find the first real error. Ignore warnings that do not matter. Tell me what failed and what command or setting probably fixes it.
+```
+
+```text
+Write me a PowerShell script that finds files larger than 5 GB in my Downloads folder, but do not delete anything. Just print the file names and sizes.
+```
+
+```text
+I want to run a local web app from GitHub. Check whether it needs Node, Python, Docker, CUDA, or Visual Studio Build Tools, then give me the cleanest install path.
+```
+
+```text
+Make me a 3D ASCII animation as a single HTML file I can open in my browser. Keep everything inside one file: HTML, CSS, and JavaScript.
+```
+
+```text
+Review this config file and tell me what looks wrong. Explain each problem like I am not technical.
+```
 
 ## What You Get
 
