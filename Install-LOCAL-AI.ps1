@@ -11,7 +11,8 @@ $LlamaZipUrl = 'https://github.com/ggml-org/llama.cpp/releases/download/b9264/ll
 $CudaZipUrl = 'https://github.com/ggml-org/llama.cpp/releases/download/b9264/cudart-llama-bin-win-cuda-13.1-x64.zip'
 $OpenCodeUrl = 'https://opencode.ai/download/stable/windows-x64-nsis'
 $ModelFileName = 'Qwen3.6-35B-A3B-Uncensored-Genesis-MTP-APEX-Compact.gguf'
-$ModelUrl = "https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/resolve/main/$ModelFileName?download=true"
+$ModelUrl = "https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/resolve/main/$ModelFileName"
+$ModelFallbackUrl = "https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/resolve/main/$ModelFileName`?download=true"
 
 $Root = $InstallRoot
 $Downloads = Join-Path $Root 'downloads'
@@ -84,6 +85,22 @@ function Download-File([string]$Url, [string]$Destination, [string]$Label) {
 
   Move-Item -LiteralPath $Temp -Destination $Destination -Force
   Write-Log "Downloaded $Label to $Destination"
+}
+
+function Download-FileWithFallback([string[]]$Urls, [string]$Destination, [string]$Label) {
+  $LastError = $null
+  foreach ($Url in $Urls) {
+    try {
+      Download-File -Url $Url -Destination $Destination -Label $Label
+      return
+    } catch {
+      $LastError = $_.Exception.Message
+      Write-Log "$Label download attempt failed: $LastError"
+      if (Test-Path -LiteralPath $Destination) { Remove-Item -LiteralPath $Destination -Force }
+    }
+  }
+
+  throw "Download failed for $Label. Last error: $LastError"
 }
 
 function Expand-ZipInto([string]$ZipPath, [string]$Destination, [string]$Label) {
@@ -172,7 +189,7 @@ try {
   }
 
   Write-Step 4 7 'Downloading the AI model'
-  Download-File -Url $ModelUrl -Destination $ModelPath -Label 'AI model'
+  Download-FileWithFallback -Urls @($ModelUrl, $ModelFallbackUrl) -Destination $ModelPath -Label 'AI model'
   if (-not (Test-Path -LiteralPath $ModelPath)) {
     Fail-Friendly 'The AI model could not be downloaded. Check your internet connection and run the installer again.' "Missing $ModelPath"
   }

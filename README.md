@@ -38,11 +38,19 @@ Model source page:
 https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF
 ```
 
+Exact model file page:
+
+```text
+https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/blob/main/Qwen3.6-35B-A3B-Uncensored-Genesis-MTP-APEX-Compact.gguf
+```
+
 Direct model download used by the installer:
 
 ```text
-https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/resolve/main/Qwen3.6-35B-A3B-Uncensored-Genesis-MTP-APEX-Compact.gguf?download=true
+https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/resolve/main/Qwen3.6-35B-A3B-Uncensored-Genesis-MTP-APEX-Compact.gguf
 ```
+
+If the direct download link ever shows an error in a browser, use the exact model file page above. The installer also retries with a fallback Hugging Face download URL automatically.
 
 Approximate model size: `17 GB`.
 
