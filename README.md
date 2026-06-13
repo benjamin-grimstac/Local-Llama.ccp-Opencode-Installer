@@ -19,10 +19,10 @@ You need:
 
 - A Windows 10 or Windows 11 computer
 - An internet connection
-- A lot of free disk space because the AI model is large
+- At least 25 GB of free disk space
 - An NVIDIA GPU is recommended
 
-This installer downloads a large AI model. It may take a long time.
+The AI model is about 17 GB. The installer downloads it for you, so it may take a while depending on your internet speed.
 
 ## Download The Installer From GitHub
 
