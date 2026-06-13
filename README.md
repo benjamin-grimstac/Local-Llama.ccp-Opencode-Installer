@@ -26,54 +26,36 @@ This is meant for people who want a working local AI coding setup without spendi
 
 ## What You Can Do With It
 
-This gives you a local AI helper you can use for more than just writing code.
+This gives you a local AI helper you can use for simple computer help, coding help, and troubleshooting.
 
-Good uses include debugging your PC, understanding scary error messages, reading logs, troubleshooting your network, pulling GitHub projects, installing local tools, writing simple scripts, reviewing configs, and getting plain-English explanations before you change anything.
-
-Thoughtful examples you can ask OpenCode after this is installed:
+Simple things you can ask:
 
 ```text
-I found this GitHub project. Read the README and tell me exactly what it does, whether it looks safe, what it installs, and the simplest Windows install steps.
+Why does my GPU keep crashing? Check these logs and explain what is happening.
 ```
 
 ```text
-Clone this GitHub repo into my Downloads folder, inspect it first, then walk me through the install one step at a time: https://github.com/example/project
+My game/app keeps crashing. Read this error and tell me the next thing to try.
 ```
 
 ```text
-I want to install this tool from GitHub, but I do not know git. Give me the easiest Windows path, including whether I should use Download ZIP, git clone, pip, npm, or an installer.
+My Wi-Fi or network is acting weird. Walk me through the basic Windows checks.
 ```
 
 ```text
-Look at this PowerShell script before I run it. Tell me what it changes, what could go wrong, and whether it touches files, the registry, firewall, services, or passwords.
+Install this GitHub project for me. Explain each step before doing it.
 ```
 
 ```text
-My PC cannot reach my server at 192.168.0.115. Give me a simple checklist for Windows: ping, ipconfig, firewall, router, DNS, and port checks.
+What does this PowerShell command do? Is it safe to run?
 ```
 
 ```text
-Here is an error from an app install. Translate it into normal English, tell me the most likely cause, and give me the next three things to try.
+Make me a single HTML file with a 3D ASCII animation I can open in my browser.
 ```
 
 ```text
-Read this log file and find the first real error. Ignore warnings that do not matter. Tell me what failed and what command or setting probably fixes it.
-```
-
-```text
-Write me a PowerShell script that finds files larger than 5 GB in my Downloads folder, but do not delete anything. Just print the file names and sizes.
-```
-
-```text
-I want to run a local web app from GitHub. Check whether it needs Node, Python, Docker, CUDA, or Visual Studio Build Tools, then give me the cleanest install path.
-```
-
-```text
-Make me a 3D ASCII animation as a single HTML file I can open in my browser. Keep everything inside one file: HTML, CSS, and JavaScript.
-```
-
-```text
-Review this config file and tell me what looks wrong. Explain each problem like I am not technical.
+Find the biggest files on my PC, but do not delete anything.
 ```
 
 ## What You Get
