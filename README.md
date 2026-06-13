@@ -2,46 +2,117 @@
 
 This installs a local AI server and OpenCode Desktop on Windows.
 
-## Install
+You do not need to know GitHub, git, coding, PowerShell, or terminals.
 
-Double-click:
+## What You Get
+
+After installing, you will have two shortcuts on your Desktop:
+
+- `Start llama.cpp Server`
+- `OpenCode Desktop`
+
+Use them in that order.
+
+## Before You Start
+
+You need:
+
+- A Windows 10 or Windows 11 computer
+- An internet connection
+- A lot of free disk space because the AI model is large
+- An NVIDIA GPU is recommended
+
+This installer downloads a large AI model. It may take a long time.
+
+## Download The Installer From GitHub
+
+1. Open this page in your web browser:
+
+```text
+https://github.com/benjamin-grimstac/Local-Llama.ccp-Opencode-Installer
+```
+
+2. Look for the green `Code` button near the top of the page.
+
+3. Click the green `Code` button.
+
+4. Click `Download ZIP`.
+
+5. Wait for the ZIP file to download.
+
+It will usually go to your `Downloads` folder.
+
+## Unzip The Download
+
+1. Open your `Downloads` folder.
+
+2. Find the downloaded ZIP file. It will have a name like:
+
+```text
+Local-Llama.ccp-Opencode-Installer-main.zip
+```
+
+3. Right-click the ZIP file.
+
+4. Click `Extract All...`.
+
+5. Click `Extract`.
+
+Windows will create a normal folder with the installer files inside.
+
+## Run The Installer
+
+1. Open the extracted folder.
+
+2. Find this file:
 
 ```text
 Install-LOCAL-AI.cmd
 ```
 
-Wait for the installer to finish. The AI model is large, so the download can take a while.
+3. Double-click `Install-LOCAL-AI.cmd`.
 
-When it is done, two shortcuts will be on your Desktop:
+4. If Windows asks whether you want to run it, choose `Run` or `More info` then `Run anyway`.
 
-- `Start llama.cpp Server`
-- `OpenCode Desktop`
+5. Leave the installer window open until it says installation is complete.
 
-## What It Installs
+The installer may look quiet during large downloads. Do not close it unless it shows an error.
 
-- `llama.cpp` local AI server
-- CUDA support files for NVIDIA GPUs
-- Qwen GGUF model
-- OpenCode Desktop GUI
-- OpenCode settings that point to the local AI server
-- Two desktop shortcuts: one for the server and one for OpenCode Desktop
+## Start LOCAL-AI
 
-## Requirements
+After install, go to your Desktop.
 
-- Windows 10 or Windows 11
-- NVIDIA GPU recommended
-- Internet connection
-- Enough free disk space for the model and llama.cpp files
+1. Double-click `Start llama.cpp Server`.
 
-## Where Files Go
+2. Wait for the server window to finish loading.
 
-Everything is installed under:
+3. Leave that server window open.
+
+4. Double-click `OpenCode Desktop`.
+
+Keep the `Start llama.cpp Server` window open while using OpenCode Desktop.
+
+## What The Installer Does
+
+The installer automatically:
+
+- Creates a `LOCAL-AI` folder on your Desktop
+- Downloads `llama.cpp`
+- Downloads NVIDIA CUDA support files
+- Downloads the Qwen GGUF AI model
+- Installs OpenCode Desktop
+- Configures OpenCode Desktop to use your local AI server
+- Creates the two Desktop shortcuts
+
+## Where Files Are Installed
+
+Everything is installed here:
 
 ```text
 Desktop\LOCAL-AI
 ```
 
-The installer creates these folders:
+Inside that folder, you may see:
 
 ```text
 Desktop\LOCAL-AI\llama.cpp
@@ -52,51 +123,58 @@ Desktop\LOCAL-AI\logs
 Desktop\LOCAL-AI\config
 ```
 
-## How To Start
-
-After install:
-
-1. Double-click `Start llama.cpp Server`.
-2. Wait for the server window to finish loading.
-3. Double-click `OpenCode Desktop`.
-
-Keep the server window open while using OpenCode Desktop.
-
-## Extra Launchers
-
-Inside `Desktop\LOCAL-AI` there are also matching launcher files:
-
-- `Start-LLM-Server.cmd` starts only the local AI server.
-- `Open-OpenCode.cmd` opens only OpenCode Desktop.
-
-Most people should use the two Desktop shortcuts instead.
+You do not need to open or edit these folders.
 
 ## If Something Goes Wrong
 
-Run `Install-LOCAL-AI.cmd` again. It is safe to re-run.
+First, try running the installer again:
 
-The installer reuses files that already downloaded and fills in anything missing.
+```text
+Install-LOCAL-AI.cmd
+```
 
-Logs are saved here:
+It is safe to run it again. It will reuse files that already downloaded and fill in anything missing.
+
+Common causes of problems:
+
+- Your internet connection dropped
+- Your computer ran out of disk space
+- Windows blocked the installer
+- The AI model download was interrupted
+
+The install log is here:
 
 ```text
 Desktop\LOCAL-AI\logs\install.log
 ```
 
+## If OpenCode Does Not Respond
+
+Make sure you started the server first.
+
+The correct order is:
+
+1. `Start llama.cpp Server`
+2. `OpenCode Desktop`
+
+If you closed the server window, double-click `Start llama.cpp Server` again.
+
 ## Uninstall
 
-Delete this folder:
+To remove LOCAL-AI:
+
+1. Delete this folder:
 
 ```text
 Desktop\LOCAL-AI
 ```
 
-Then delete these shortcuts from your Desktop:
+2. Delete these shortcuts from your Desktop:
 
 - `Start llama.cpp Server`
 - `OpenCode Desktop`
 
-If you also want to remove OpenCode Desktop, uninstall it from Windows Apps settings.
+3. If you also want to remove OpenCode Desktop, uninstall it from Windows Apps settings.
 
 ## Sources
 
