@@ -138,6 +138,27 @@ llamacpp/qwen-local
 
 That means OpenCode should use the downloaded local GGUF model by default, not an online model provider.
 
+## llama.cpp Settings Explained
+
+The installer creates the llama.cpp server launcher for you. You do not need to edit these settings.
+
+These are the important defaults:
+
+| Setting | Value | What It Means |
+| --- | --- | --- |
+| Server address | `127.0.0.1` | Only your own computer can talk to the server by default. |
+| Server port | `11434` | OpenCode connects to the local server on this port. |
+| Context size | `100000` | Allows very large prompts and long coding conversations. |
+| GPU layers | `auto` | llama.cpp automatically uses your NVIDIA GPU where it can. |
+| Flash attention | `on` | Helps performance and memory use on supported GPUs. |
+| Parallel requests | `1` | Keeps the setup simple and focused on one user at a time. |
+| CPU threads | `16` | Uses up to 16 CPU threads for supporting work. |
+| Batch size | `512` | A balanced default for prompt processing. |
+| KV cache | `q4_0` | Reduces memory use so large context is more practical. |
+| Prompt cache RAM | `8192 MB` | Keeps recent prompt data cached to make follow-up requests faster. |
+
+In plain English: the server is set up to be local, private, GPU-accelerated, and tuned for large coding prompts without requiring you to know llama.cpp commands.
+
 ## Download The Installer From GitHub
 
 1. Open this page in your web browser:
